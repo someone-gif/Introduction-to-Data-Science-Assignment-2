@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 
 # Fetch the data with proper headers
-url = "https://en.wikipedia.org/wiki/Data_science"
+url_of_the_data_science_wikipedia_page = "https://en.wikipedia.org/wiki/Data_science"
 
 #usualy the wikipedia denies acesss so I used the user agent to make it work
 headers = {
@@ -10,7 +10,7 @@ headers = {
 }
 
 #headers=headers for the user agent
-data_science_wikipedia_page = requests.get(url, headers=headers).text
+data_science_wikipedia_page = requests.get(url_of_the_data_science_wikipedia_page, headers=headers).text
 
 # Parse the HTML
 parsed_data_science_wikipedia_html_document = BeautifulSoup(data_science_wikipedia_page, "html5lib")
